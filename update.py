@@ -11,7 +11,7 @@ head = '''
 color = ['unknown', 'red', 'orange', 'yellow',
          'green', 'blue', 'purple', 'black']
 for c in color:
-    with open(f'./Web/{c}.html', 'w', encoding='utf-8') as f:
+    with open(f'../Web/{c}.html', 'w', encoding='utf-8') as f:
         f.write(head)
 data = []
 with open('./data.txt', encoding='utf-8') as f:
@@ -24,6 +24,6 @@ for x in data:
     for i in range(2, len(temp)):
         name += temp[i]
     name = name[:-1]
-    with open(f'./Web/{color[int(diff)]}.html', 'a', encoding='utf-8') as f:
+    with open(f'../Web/{color[int(diff)]}.html', 'a', encoding='utf-8') as f:
         f.write(
-            f'<a href="https://www.luogu.com.cn/problem/{pid}">{name}</a><br>\n')
+            f'<a href="https://www.luogu.com.cn/problem/{pid}" target="_blank">{pid} {name}</a><br>\n')
